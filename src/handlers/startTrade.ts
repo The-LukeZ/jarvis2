@@ -18,10 +18,11 @@ export const StartButtonHandler = new ComponentHandler<ComponentType.Button, MyC
 
   const user = await db.getUser(ctx.user.id);
   if (user?.blocked) {
-    return ctx.reply(buildErrorMessage("Du darfst keine Trades starten, da du blockiert bist."));
+    await ctx.reply(buildErrorMessage("Du darfst keine Trades starten, da du blockiert bist."));
+    return;
   }
 
-  return ctx.showModal(
+  await ctx.showModal(
     new ModalBuilder()
       .setCustomId("startTrade")
       .setTitle("Neuen Trade starten")
@@ -62,6 +63,7 @@ export const StartButtonHandler = new ComponentHandler<ComponentType.Button, MyC
           .setFileUploadComponent(new FileUploadBuilder().setCustomId("attachments").setMaxValues(5).setRequired(false))
       )
   );
+  return;
 });
 
 export const StartModalHandler = new ModalHandler<MyContext>("startTrade", async (ctx) => {});
