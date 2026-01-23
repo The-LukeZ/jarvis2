@@ -1,8 +1,4 @@
 import { registerCommands } from "honocord";
-// import { pingCommand } from "./index";
+import * as handlers from "./handlers/index.js";
 
-await registerCommands(
-  process.env.DISCORD_TOKEN!,
-  process.env.DISCORD_APPLICATION_ID!,
-  // pingCommand
-);
+await registerCommands(process.env.DISCORD_TOKEN!, process.env.DISCORD_APPLICATION_ID!, Object.values(handlers));
