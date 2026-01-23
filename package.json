@@ -2,8 +2,9 @@
   "name": "jarvis2",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "register": "tsx --env-file=.en src/register.ts",
+    "register": "tsx --env-file=.env src/register.ts",
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
     "start": "wrangler dev",
