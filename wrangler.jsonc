@@ -20,5 +20,11 @@
       "database_id": "f8fc3beb-3785-4d2c-991f-592458cedb2a",
       "database_name": "jarvis",
     }
-  ]
+  ],
+  "route": {
+    "custom_domain": true,
+    "pattern": "jarvis.thelukez.com"
+  },
+  "workers_dev": true,
+  "preview_urls": false
 }
