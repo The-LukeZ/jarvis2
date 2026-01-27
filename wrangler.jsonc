@@ -7,20 +7,20 @@
   "name": "jarvis2",
   "main": "src/index.ts",
   "compatibility_date": "2026-01-20",
-  "compatibility_flags": [ "nodejs_compat" ],
+  "compatibility_flags": ["nodejs_compat"],
   "observability": {
     "enabled": true,
   },
   "vars": {
-    "IS_CF_WORKER": true
+    "IS_CF_WORKER": true,
   },
   "d1_databases": [
     {
       "binding": "DATABASE",
       "database_id": "f8fc3beb-3785-4d2c-991f-592458cedb2a",
       "database_name": "jarvis",
-    }
+    },
   ],
   "workers_dev": true,
-  "preview_urls": true
+  "preview_urls": true,
 }
