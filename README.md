@@ -2,4 +2,3 @@
 
 Jarvis Bot for Community Discord of xnikgo.
 
-test
